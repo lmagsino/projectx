@@ -2,14 +2,15 @@ RailsAdmin.config do |config|
 
   ### Popular gems integration
 
-  ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  # == Devise ==
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
 
-  ## == CancanCan ==
-  # config.authorize_with :cancancan
+  config.current_user_method(&:current_user)
+
+  # == CancanCan ==
+  config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -27,12 +28,12 @@ RailsAdmin.config do |config|
     dashboard                     # mandatory
     index                         # mandatory
     new
-    export
-    bulk_delete
+    # export
+    # bulk_delete
     show
-    edit
-    delete
-    show_in_app
+    # edit
+    # delete
+    # show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
